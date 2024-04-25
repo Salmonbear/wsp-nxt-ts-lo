@@ -186,7 +186,7 @@ function PlasmicGlobalFooter__RenderFunc(props: {
                     style={{ color: "#FFFFFF" }}
                   >
                     {
-                      "Quality wedding speeches for  bridal parties, generated with AI"
+                      "Quality wedding speeches for  bridal parties, generated with AI."
                     }
                   </span>
                 </React.Fragment>
