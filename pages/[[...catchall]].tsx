@@ -6,10 +6,11 @@ import {
   PlasmicRootProvider,
 } from "@plasmicapp/loader-nextjs";
 import type { GetStaticPaths, GetStaticProps } from "next";
-
 import Error from "next/error";
 import { useRouter } from "next/router";
 import { PLASMIC } from "@/plasmic-init";
+import GlobalContextsProvider from "../components/plasmic/wedding_speech_pro/PlasmicGlobalContextsProvider";
+import { Plasmic_0Homepage } from "../components/plasmic/wedding_speech_pro/Plasmic_0Homepage";
 
 export default function PlasmicLoaderPage(props: {
   plasmicData?: ComponentRenderData;
@@ -17,9 +18,29 @@ export default function PlasmicLoaderPage(props: {
 }) {
   const { plasmicData, queryCache } = props;
   const router = useRouter();
+
+  // Check if this is the root path and render the homepage component
+  if (!router.query.catchall) {
+    return (
+      <GlobalContextsProvider>
+        <PlasmicRootProvider
+          loader={PLASMIC}
+          prefetchedData={plasmicData}
+          prefetchedQueryData={queryCache}
+          pageParams={router.query}
+          pageQuery={router.query}
+        >
+          <Plasmic_0Homepage />
+        </PlasmicRootProvider>
+      </GlobalContextsProvider>
+    );
+  }
+
+  // The rest of the catch-all logic
   if (!plasmicData || plasmicData.entryCompMetas.length === 0) {
     return <Error statusCode={404} />;
   }
+
   const pageMeta = plasmicData.entryCompMetas[0];
   return (
     <PlasmicRootProvider
@@ -39,7 +60,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const plasmicPath = typeof catchall === 'string' ? catchall : Array.isArray(catchall) ? `/${catchall.join('/')}` : '/';
   const plasmicData = await PLASMIC.maybeFetchComponentData(plasmicPath);
   if (!plasmicData) {
-    // non-Plasmic catch-all
+    // Non-Plasmic catch-all
     return { props: {} };
   }
   const pageMeta = plasmicData.entryCompMetas[0];
@@ -55,7 +76,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   );
   // Use revalidate if you want incremental static regeneration
   return { props: { plasmicData, queryCache }, revalidate: 60 };
-}
+};
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const pageModules = await PLASMIC.fetchPages();
@@ -67,4 +88,4 @@ export const getStaticPaths: GetStaticPaths = async () => {
     })),
     fallback: "blocking",
   };
-}
+};
