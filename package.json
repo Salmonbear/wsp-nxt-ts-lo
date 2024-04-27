@@ -9,10 +9,30 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.3.6",
+    "@ant-design/pro-components": "^2.6.4",
+    "@plasmicapp/cli": "^0.1.327",
     "@plasmicapp/loader-nextjs": "^1.0.317",
+    "@plasmicapp/react-web": "^0.2.330",
+    "@plasmicpkgs/antd5": "^0.0.226",
+    "@plasmicpkgs/lottie-react": "^0.0.179",
+    "@plasmicpkgs/plasmic-basic-components": "^0.0.211",
+    "@plasmicpkgs/plasmic-cms": "^0.0.253",
+    "@plasmicpkgs/plasmic-embed-css": "^0.1.177",
+    "@plasmicpkgs/plasmic-nav": "^0.0.162",
+    "@plasmicpkgs/plasmic-query": "^0.0.210",
+    "@plasmicpkgs/plasmic-rich-components": "^1.0.181",
+    "@plasmicpkgs/plasmic-tabs": "^0.0.33",
+    "@plasmicpkgs/radix-ui": "^0.0.46",
+    "@plasmicpkgs/react-awesome-reveal": "^3.8.193",
+    "@plasmicpkgs/react-scroll-parallax": "^0.0.199",
+    "@plasmicpkgs/react-slick": "^0.0.213",
+    "@plasmicpkgs/react-twitter-widgets": "^0.0.190",
     "next": "13.5.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/node": "^20",
