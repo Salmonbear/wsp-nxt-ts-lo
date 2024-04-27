@@ -132,8 +132,7 @@
           "componentImportPath": "@plasmicpkgs/radix-ui"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "itBdcjth19Wasd6ngAYxWR",
@@ -682,8 +681,7 @@
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerBreadcrumb"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "84wxoth5npGrp6RRXPL88z",
@@ -1021,20 +1019,6 @@
           "plumeType": "button"
         },
         {
-          "id": "1Fk0CvwEKPw",
-          "name": "LikeOrNotPage",
-          "type": "managed",
-          "projectId": "sj7u5T6A4j1Xdo61ZkYEWA",
-          "renderModuleFilePath": "plasmic/wedding_speech_pro/PlasmicLikeOrNotPage.tsx",
-          "importSpec": {
-            "modulePath": "../pages/[slug/slug]/like-or-not.tsx"
-          },
-          "cssFilePath": "plasmic/wedding_speech_pro/PlasmicLikeOrNotPage.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/[slug/slug]/like-or-not"
-        },
-        {
           "id": "_tORwijkjvr",
           "name": "_3MaidOfHonorSpeech",
           "type": "managed",
@@ -1114,20 +1098,6 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/new-home-2"
-        },
-        {
-          "id": "zdThY8Gmr_It",
-          "name": "_0Homepage",
-          "type": "managed",
-          "projectId": "sj7u5T6A4j1Xdo61ZkYEWA",
-          "renderModuleFilePath": "plasmic/wedding_speech_pro/Plasmic_0Homepage.tsx",
-          "importSpec": {
-            "modulePath": "../pages/index.tsx"
-          },
-          "cssFilePath": "plasmic/wedding_speech_pro/Plasmic_0Homepage.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/"
         },
         {
           "id": "SW7dk3xEW-JW",
@@ -1375,6 +1345,20 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/tools/quote-finder-2"
+        },
+        {
+          "id": "zdThY8Gmr_It",
+          "name": "_0Homepage",
+          "type": "managed",
+          "projectId": "sj7u5T6A4j1Xdo61ZkYEWA",
+          "renderModuleFilePath": "plasmic/wedding_speech_pro/Plasmic_0Homepage.tsx",
+          "importSpec": {
+            "modulePath": "../pages/index.tsx"
+          },
+          "cssFilePath": "plasmic/wedding_speech_pro/Plasmic_0Homepage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/"
         }
       ],
       "icons": [
